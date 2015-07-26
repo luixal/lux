@@ -1,0 +1,31 @@
+<template name="map">
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <div class="sidebar-nav">
+          {{> zonesTree}}
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                  <h1>Map View</h1>
+                  {{> flashMessages}}
+                  {{> mapView}}
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</template>
+
+<template name="mapView">
+  <!-- <input type="button" class="btn btn-success" id="btn-find-me" value="Find me!"/> -->
+  <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+  </div>
+</template>

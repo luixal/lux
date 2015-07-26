@@ -1,0 +1,51 @@
+<template name="zones">
+  {{> zonesTree}}
+</template>
+
+<template name="create_zone">
+  <form class="new-zone">
+    <label>Select parent zone:</label>
+    <select id='parentZone'>
+      <option value="">Parent Zone</option>
+      {{#each zones}}
+        {{> zone}}
+      {{/each}}
+    </select>
+    <input type="text" name="zone_name" placeholder="New zone name">
+    <button type="button" class="btn btn-success">Add Zone</button>
+  </form>
+</template>
+
+<template name="zone">
+  <option value="{{name}}">{{name}}</option>
+</template>
+
+<template name="zonesTree">
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <div class="sidebar-nav">
+          <h2>Zones Tree</h2>
+          <input type="text" id="tree-search" placeholder="Search zone"/>
+          <hr>
+          <div class="tree" id="tree"></div>
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                  <h1>Zone Management</h1>
+                    {{> create_zone}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+
+</template>

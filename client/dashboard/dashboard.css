@@ -1,0 +1,30 @@
+.landing {
+  color: #ffffff;
+}
+
+.full {
+  background: url(imgs/landing_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.chart-legend li span{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+div .incidences-block {
+  border-radius: 25px;
+  border: 2px solid #8AC007;
+  padding: 20px;
+  margin: 10px;
+  margin-right: 100px;
+}
